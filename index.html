@@ -1,0 +1,98 @@
+<!doctype=html>
+<html>
+   <head>
+   <meta charset="utf-8"/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script type="text/javascript" src="validation.js"></script>
+   <link rel="stylesheet" href="style.css">
+   <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+   
+   <script>
+	var myFirebaseRef = new Firebase("https://gkfirebase.firebaseio.com//");
+		myFirebaseRef.child("news1").on("value", function(snapshot) {
+		var msg=(snapshot.val());
+			document.getElementById('link1').innerHTML=msg;
+			
+		});	
+		
+		myFirebaseRef.child("new2").on("value", function(snapshot) {
+		var msg1=(snapshot.val());
+			document.getElementById('link2').innerHTML=msg1;
+			
+		});
+			
+			myFirebaseRef.child("news3").on("value", function(snapshot) {
+		var msg2=(snapshot.val());
+			document.getElementById('link3').innerHTML=msg2;
+			
+		});
+   </script>
+   </head>	
+   <body>
+	<div id="main">
+	
+	<div id="menu">
+	<div id="nav">
+		
+		<div id="nav_wrapper">
+			
+			<div id="brandname">Sears Holdings India</div>
+				</div>
+	</div>
+	</div>
+
+
+	
+
+
+	<div id="left">
+		<div id="image1"><img src="Sears (1).png"></div><br>
+		<div class="textarea">The company operates through its subsidiaries, including Sears, Roebuck and Co. and Kmart Corporation, with full-line and specialty retail stores across the United States.</div>
+		<br>
+		<div id="image1"><img src="Sears (1).png"></div><br>
+		<div class="textarea">Sears Holdings Corporation (NASDAQ: SHLD) is a leading integrated retailer focused on seamlessly connecting the digital and physical shopping experiences to serve our members - wherever, whenever and however they want to shop.</div>
+     </div>
+		<div id="right">
+		<h2>News Headlines</h2>
+				
+				<div class="flex-container">
+				<div class="flex-item"><h2>Government Affairs</h2><div class="button1"><a href="file:///C:/Users/gkadam/Desktop/aasignment/Html%20css%20firebase/sampl1.html" id="link1"><div></div></div></div>
+					
+				<div class="flex-item"><h2>Business Opportunities</h2><div class="button1"><a href="file:///C:/Users/gkadam/Desktop/aasignment/Html%20css%20firebase/sample2.html"  id="link2"></a></div></div>
+				<div class="flex-item"><h2>Awards & Recognitions</h2><div class="button1"><a href="file:///C:/Users/gkadam/Desktop/aasignment/Html%20css%20firebase/sample3.html" id="link3"></a></div></div>  
+				</div>
+
+		
+		</div><br>
+
+			<div id="footer">
+			<div id="left1">
+			<div><p>Contact Us.</p>
+				<p> Pune, India</p>
+				<p>&#9743; Phone: +91 111111111111</p>
+				<p>&#9993; Email: mail@searshc.com</p></div>
+				<div id="copyright">Copyright &copy 2016 Sears Holdings Inc. All rights reserved.</div>
+				</div>
+				
+						<div id="right1">
+						
+						<form name="myForm" action="demo_form.asp" onsubmit="return validateForm();" method="post">
+						<div>
+							<div><label>Name:</label><input type="text" name="name" placeholder=" Your Name" required></div><br>
+						
+							<div><label>E-mail:</label><input type="text" name="email" placeholder=" Example@searshc.com" required></div><br>
+						
+							<div><label>Message:</label><input type="textarea" name="comment" placeholder="Message" rows="5" cols="35" required></div><br>
+							<div><input type="submit" value="Submit">
+							<input type="reset" value="Reset"></div>
+						</div>
+						</form>
+						</div>
+						
+				
+			</div>
+	</div>
+    </body>
+   
+</html>
+
